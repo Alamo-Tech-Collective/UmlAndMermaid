@@ -1,0 +1,14 @@
+classDiagram
+  class User {
+    username
+    password
+    login()
+  }
+
+  class Session {
+    token
+    create()
+    isValid()
+  }
+
+  User --> Session

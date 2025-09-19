@@ -1,0 +1,15 @@
+@startuml
+class User {
+  -username : String
+  -password : String
+  +login(password : String) : boolean
+}
+
+class Session {
+  -token : String
+  +create(user : User) : Session
+  +isValid() : boolean
+}
+
+User "1" --> "1" Session
+@enduml
