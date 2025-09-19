@@ -1,0 +1,26 @@
+@startuml
+class Customer {
+  -id : int
+  -name : String
+  -email : String
+  +placeOrder(product : Product, quantity : int) : Order
+}
+
+class Product {
+  -id : int
+  -name : String
+  -price : float
+  +updatePrice(newPrice : float) : void
+}
+
+class Order {
+  -id : int
+  -date : Date
+  -status : String
+  +calculateTotal() : float
+  +markShipped() : void
+}
+
+Customer "1" --> "*" Order
+Order "*" --> "*" Product
+@enduml

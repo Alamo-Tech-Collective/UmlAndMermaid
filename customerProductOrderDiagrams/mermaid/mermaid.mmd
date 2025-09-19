@@ -1,0 +1,25 @@
+classDiagram
+  class Customer {
+    id
+    name
+    email
+    placeOrder(product, quantity)
+  }
+
+  class Product {
+    id
+    name
+    price
+    updatePrice(newPrice)
+  }
+
+  class Order {
+    id
+    date
+    status
+    calculateTotal()
+    markShipped()
+  }
+
+  Customer --> Order
+  Order --> Product
